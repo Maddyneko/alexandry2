@@ -1,0 +1,23 @@
+
+
+/*Contener*/
+/*Formulaires*/
+form{
+
+}
+.formSection{
+	border: solid 1px #CCC;
+	border-radius: 10px;
+	padding: 10px;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.button_ajout{
+	border-radius: 10px;
+	padding: 10px;
+
+}
+.panel{
+    padding:10px;
+}
