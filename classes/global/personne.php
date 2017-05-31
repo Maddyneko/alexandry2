@@ -1,5 +1,5 @@
 <?php
-include_once('/datas/vol2/w4a149731/var/www/maddyneko.fr/htdocs/alexandry2/classes/global/element.php');
+include_once('/datas/vol2/w4a149731/var/www/maddyneko.fr/htdocs/alexandry2/classes/element.php');
 
 
 class Personne extends Element{

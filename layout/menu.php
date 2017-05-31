@@ -22,6 +22,32 @@
 					</li>
 				</ul>
 			</li>
+
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Livres <span class="caret"></span></a>
+          		<ul class="dropdown-menu">
+					<li>
+						<a href="/alexandry2/views/pages/li/livres.php">
+							Livres
+						</a>
+					</li>
+					<li>
+						<a href="/alexandry2/views/pages/li/auteurs.php">
+							Auteurs
+						</a>
+					</li>
+					<li>
+						<a href="/alexandry2/views/pages/li/series.php">
+							Séries
+						</a>
+					</li>
+					<li>
+						<a href="/alexandry2/views/pages/li/editeurs.php">
+							Editeurs
+						</a>
+					</li>
+				</ul>
+			</li>
 		</ul>
 	</div>
 </nav>
