@@ -32,7 +32,7 @@
         </div>
         <?php } ?>
         <div class="clearfix"></div>
-        <a href="/alexandry2/views/pages/li/editeur_ajout.php">Ajouter un éditeur</a>
+        <a href="<?php echo $host; ?>/views/pages/li/editeur_ajout.php">Ajouter un éditeur</a>
  
     </div>
     <?php include_once('../../../layout/javascript.php'); ?>

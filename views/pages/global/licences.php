@@ -32,7 +32,7 @@
       </div>
       <?php } ?>
       <div class="clearfix"></div>
-      <a href="/alexandry/views/pages/global/licence_ajout.php">Ajouter une licence</a>
+      <a href="<?php echo $host; ?>/views/pages/global/licence_ajout.php">Ajouter une licence</a>
     </div>
 
 

@@ -34,7 +34,6 @@
   <script type="text/javascript" >
   console.log("coucou");
   $(document).ready(function(){
-  	  console.log("coucou");
 
   	$("#message").html('');
   	var contenuMessage = $("#getNom").val();
@@ -43,8 +42,24 @@
 		setTimeout(function(){
 			$("#message").fadeOut('slow');
 			$("#message").html('');
-
 		}, 15000);
+
+    $("#nompersonne").blur(function(){
+      var nomPersonne = $("#nompersonne").val();
+      var tabNomPersonne = nomPersonne.split(" ");
+      console.log(tabNomPersonne.length);
+      var taille = tabNomPersonne.length;
+      taille = taille - 1;
+      var nomTri = tabNomPersonne[taille];
+      var nomSeo = tabNomPersonne[taille];
+      for (i = 0; i < taille; i++) {
+        nomTri = nomTri + " " + tabNomPersonne[i];
+        nomSeo = nomSeo + "-" + tabNomPersonne[i];
+
+      }
+      $("#nomtri").val(nomTri);
+      
+    });
 	});
 
   });

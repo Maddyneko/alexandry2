@@ -33,7 +33,7 @@
       </div>  
 	 <?php } ?>
   <div class="clearfix"></div>
-  <a href="/alexandry2/views/pages/global/pays_ajout.php">Ajouter un pays</a>
+  <a href="<?php echo $host; ?>/views/pages/global/pays_ajout.php">Ajouter un pays</a>
   </div>
   <?php include_once('../../../layout/javascript.php'); ?>
 

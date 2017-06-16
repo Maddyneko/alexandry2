@@ -32,7 +32,7 @@
         </div>
         <?php } ?>
         <div class="clearfix"></div>
-        <a href="/alexandry2/views/pages/global/personne_ajout.php">Ajouter une personne</a>
+        <a href="<?php echo $host; ?>/views/pages/global/personne_ajout.php">Ajouter une personne</a>
  
     </div>
     <?php include_once('../../../layout/javascript.php'); ?>

@@ -1,5 +1,5 @@
 <?php
-include_once('/datas/vol2/w4a149731/var/www/maddyneko.fr/htdocs/alexandry/classes/global/licence.php');
+include_once($racines . 'classes/global/licence.php');
 
 
 class Licences{

@@ -6,17 +6,17 @@
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Global <span class="caret"></span></a>
           		<ul class="dropdown-menu">
 					<li>
-						<a href="/alexandry2/views/pages/global/personnes.php">
+						<a href="<?php echo $host; ?>/views/pages/global/personnes.php">
 							Personnes
 						</a>
 					</li>
 					<li>
-						<a href="/alexandry2/views/pages/global/licences.php">
+						<a href="<?php echo $host; ?>/views/pages/global/licences.php">
 							Licences
 						</a>
 					</li>
 					<li>
-						<a href="/alexandry2/views/pages/global/payss.php">
+						<a href="<?php echo $host; ?>/views/pages/global/payss.php">
 							Pays
 						</a>
 					</li>
