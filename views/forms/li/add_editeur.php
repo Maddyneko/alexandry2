@@ -9,7 +9,7 @@
       <?php foreach($payss->getPayss() as $pays) { ?>
         <option value="<?php echo $pays->getId(); ?>"><?php echo $pays->getNomPays(); ?></option>
       <?php } ?>
-      }
+      </select>
     </div>
 
     <div class="col-md-12">
