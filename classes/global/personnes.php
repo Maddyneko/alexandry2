@@ -40,6 +40,21 @@ private $Personnes;
 		}
 	}
 
+	public function setPersonnesNonAuteur($bdd)
+	{
+		$requete = "SELECT * "
+			. "FROM x_personne_t "
+			. "WHERE Id NOT IN ("
+			. " SELECT IdPersonne FROM li_auteur_t "
+			. ") "
+			;
+		foreach ($bdd->query($requete) as $stmt){
+			$personne = new Personne();
+			$personne->setDatas($stmt);
+			$this->Personnes[] = $personne;
+		}
+	}
+
 	/*********************/
 	/*		 AUTRE 	   	 */
 	/*********************/

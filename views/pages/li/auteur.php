@@ -1,8 +1,15 @@
 <?php include_once('../../../config/parametres.php'); ?>
-<?php
-  include_once('../../../classes/global/licences.php');
-  $licences = new Licences();
-  $licences->setLicences($bdd);
+<?php $idElement = '';
+	if(isset($_GET['id'])){
+		$idElement = $_GET['id'];
+	}
+	else{
+		header('Location:../../../index.php');
+  }
+  include_once('../../../classes/li/auteur.php');
+  $auteur = new Auteur();
+  $auteur->setId($idElement);
+  $auteur->getAuteurBd($bdd);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -20,16 +27,10 @@
   <body>
     <?php include_once('../../../layout/header.php'); ?>
     <?php include_once('../../../layout/menu.php'); ?>
+    <div class="col-md-12">
+      <h1><?php echo $auteur->getNom(); ?></h1>
 
-    <?php   foreach($auteurs->geAuteurs() as $element) { ?>
-    <a href = "pays.php?id=<?php echo $element->getId(); ?>">   
-      <p>Id : <?php echo $element->getId(); ?></p>
-      <p>Nom : <?php echo $element->getNom(); ?></p>
-  <?php } ?>
-
-
-  <a href="/alexandry/views/forms/global/add_auteur.php">Ajouter un auteur</a>
-
+    </div>
   <?php include_once('../../../layout/javascript.php'); ?>
 
   </body>
