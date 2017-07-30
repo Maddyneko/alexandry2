@@ -25,6 +25,9 @@
 	<h1>Formulaire pour ajouter une personne</h1>
 	<form id="form_pays_ajout" action="../../../scripts/global/add_personne.php" method="post" class="col-md-offset-1 col-md-10">
 		<?php include_once('../../forms/global/add_personne.php'); ?>
+    <div class="col-md-12">
+      <input class="btn btn-primary" type="submit" value="Ajouter" / >
+    </div>
 	</form>
 
 	<input id=getNom type="hidden" value="<?php echo $getNom; ?>" />

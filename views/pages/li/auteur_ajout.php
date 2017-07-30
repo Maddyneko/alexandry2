@@ -25,6 +25,9 @@
 	<h1>Formulaire pour ajouter un auteur</h1>
 	<form id="form_pays_ajout" action="../../../scripts/li/add_auteur.php" method="post" class="col-md-offset-1 col-md-10">
 		<?php include_once('../../forms/li/add_auteur.php'); ?>
+    <div class="col-md-12">
+      <input class="btn btn-primary" type="submit" value="Ajouter" / >
+    </div>
 	</form>
 
   <?php include_once('../../../layout/javascript.php'); ?>

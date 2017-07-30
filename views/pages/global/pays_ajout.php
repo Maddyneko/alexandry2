@@ -26,6 +26,9 @@
     class="col-md-offset-1 col-md-10"
     >
     <?php include_once('../../forms/global/add_pays.php'); ?>
+    <div class="col-md-12">
+      <input class="btn btn-primary" type="submit" value="Ajouter" / >
+    </div>
   </form>
 
   <div class="clearfix"></div>
