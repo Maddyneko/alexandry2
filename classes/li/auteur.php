@@ -29,7 +29,7 @@ class Auteur extends Element{
 	}
 
 	public function getIdPersonne(){
-		return $this->Id;
+		return $this->IdPersonne;
 	}
 
 	public function getNom(){

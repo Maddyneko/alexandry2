@@ -21,7 +21,7 @@ class Auteurs{
 	/*Getters*/
 	public function getAuteurs()
 	{
-		return $this->series;
+		return $this->auteurs;
 	}
 
 	/*Setters*/
