@@ -1,4 +1,5 @@
 <?php
+include_once('/datas/vol2/w4a149731/var/www/maddyneko.fr/htdocs/alexandry2/classes/li/livrePays.php');
 
 
 class Livre{
@@ -10,10 +11,14 @@ class Livre{
     private $idLicence;
     private $idPremiereEdition;
 
+    private $livrePaysOrigine;
+
     /*********************/
     /*   CONSTRUCTEUR    */
     /*********************/
-
+    public function __construct() {
+        $this->livrePaysOrigine = new LivrePays();
+    }
     /*********************/
     /* GETTERS & SETTERS */
     /*********************/
@@ -44,7 +49,10 @@ class Livre{
     {
         return $this->idPremiereEdition;
     }
-
+    public function getLivrePaysOrigine()
+    {
+        return $this->livrePaysOrigine;
+    }
     /*Setters*/
     public function setId($valeur)
     {
@@ -69,6 +77,10 @@ class Livre{
     public function setIdPremiereEdition($valeur)
     {
          $this->idPremiereEdition = $valeur;
+    }
+    public function setLivrePaysOrigine($valeur)
+    {
+         $this->livrePaysOrigine = $valeur;
     }
 
     public function setDatas($data)
