@@ -10,13 +10,14 @@ class Livre{
     private $numeroEpisode;
     private $idLicence;
     private $idPremiereEdition;
-
+    private $auteurs;
     private $livrePaysOrigine;
 
     /*********************/
     /*   CONSTRUCTEUR    */
     /*********************/
     public function __construct() {
+        $this->auteurs = array();
         $this->livrePaysOrigine = new LivrePays();
     }
     /*********************/
@@ -49,10 +50,16 @@ class Livre{
     {
         return $this->idPremiereEdition;
     }
+    public function getAuteurs()
+    {
+        return $this->auteurs;
+    }
+
     public function getLivrePaysOrigine()
     {
         return $this->livrePaysOrigine;
     }
+
     /*Setters*/
     public function setId($valeur)
     {
@@ -105,6 +112,10 @@ class Livre{
         }
     }
 
+    public function setAuteur($idAuteur) {
+        $this->auteurs[] = $idAuteur;
+    }
+
     /*********************/
     /*       BDD         */
     /*********************/
@@ -133,6 +144,19 @@ class Livre{
         . ", " . $this->idPaysOrigine . " "
 
         . ") ";
+        $bdd->query($requete);
+        $this->id = $bdd->lastInsertId();
+    } 
+
+    public function ajoutAuteur($bdd, $idAuteur) {
+        $requete = "INSERT INTO li_livre_auteur_t ("
+        . "IdLivre "
+        . ", IdAuteur "
+        . ") VALUES( " 
+        . " " . $this->id . " "
+        . ", " . $idAuteur . " "
+        . ") ";
+        
         $bdd->query($requete);
     } 
 

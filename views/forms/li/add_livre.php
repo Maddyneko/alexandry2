@@ -18,6 +18,20 @@
         </div>
     </div>
 
+    <div class="panel panel-default">
+        <div class="panel-heading">Information sur l'auteur</div>
+        <div class="panel-body">
+            <div class="col-md-12 form-group">
+                <label for="idAuteur">Choisir l'auteur</label>
+                <select class="form-control" id="idAuteur" name="idAuteur">
+                    <?php foreach($auteurs->getAuteurs() as $auteur) { ?>
+                    <option value="<?php echo $auteur->getIdPersonne(); ?>"><?php echo $auteur->getNom(); ?></option>
+                    <?php } ?>
+                </select>
+            </div>
+        </div>
+    </div>
+
     <div class="col-md-12 form-group">
         <label for="idLicence">Choisir une licence</label>
         <select class="form-control" id="idLicence" name="idLicence">
@@ -28,6 +42,7 @@
     </div>
 
 
+   
 
     <!--<label for="idPremiereEdition">Choisir la première édition</label>
     <div class="col-md-12 form-group">

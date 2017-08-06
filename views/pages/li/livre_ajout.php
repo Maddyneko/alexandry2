@@ -12,7 +12,13 @@
     include_once('../../../classes/li/series.php');
     $series = new Series();
     $series->setSeries($bdd);
+
+    include_once('../../../classes/li/auteurs.php');
+    $auteurs = new Auteurs();
+    $auteurs->setAuteurs($bdd);
+
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
