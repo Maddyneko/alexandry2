@@ -1,8 +1,9 @@
 <?php include_once('../../../config/parametres.php'); ?>
 <?php
     include_once('../../../classes/li/livres.php');
-    $livres = new livres();
+    $livres = new Livres();
     $livres->setLivres($bdd);
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -26,7 +27,7 @@
         <div class="col-md-3">
             <div class="col-md-12 col-md-offset-1 panel panel-default">
                 <a href = "livres.php?id=<?php echo $element->getId(); ?>">
-                  <p><?php echo $element->getNom(); ?></p>
+                  <p><?php echo $element->getId(); ?></p>
                 </a>
             </div>
         </div>

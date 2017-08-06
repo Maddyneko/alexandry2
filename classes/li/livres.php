@@ -31,12 +31,11 @@ class Livres{
 	/*********************/
 	public function setLivres($bdd)
 	{
-		$requete = "SELECT * FROM li_livre_t";
+		$requete = "SELECT * FROM li_livre_t ";
 		foreach ($bdd->query($requete) as $stmt){
-			//print_r($stmt);
 			$livre = new Livre();
 			$livre->setDatas($stmt);
-			$this->Livres[] = $livre;
+			$this->livres[] = $livre;
 		}
 	}
 
