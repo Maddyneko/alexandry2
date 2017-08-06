@@ -1,8 +1,8 @@
 <?php
-include_once('/datas/vol2/w4a149731/var/www/maddyneko.fr/htdocs/alexandry2/classes/global/pays.php');
+include_once('/datas/vol2/w4a149731/var/www/maddyneko.fr/htdocs/alexandry2/classes/li/livre.php');
 
 
-class Payss{
+class Livres{
 
 	private $livres;
 
@@ -19,7 +19,7 @@ class Payss{
 	/*********************/
 
 	/*Getters*/
-	public function getPayss()
+	public function getLivres()
 	{
 		return $this->livres;
 	}

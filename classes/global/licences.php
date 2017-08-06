@@ -1,5 +1,5 @@
 <?php
-include_once($racines . 'classes/global/licence.php');
+include_once($racine . 'classes/global/licence.php');
 
 
 class Licences{
