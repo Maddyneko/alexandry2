@@ -114,7 +114,7 @@ class Livre{
             . "WHERE Id = ". $this->id . " "
             . "LIMIT 0, 1 "
             ;
-        $stmt = $bdd->query($requete)->fetch(); 
+        $stmt = $bdd->query($requete); 
         $this->setDatas($stmt);
     }
 
@@ -148,14 +148,27 @@ class Livre{
     }
 
     public function getLivrePaysDetailBd($bdd) {
-        $requete = "SELECT Id, IdSerie, NumeroEpisode, IdLicence, IdPremiereEdition, IdPaysOrigine "
-            . "FROM li_livre_t L "
+        $requete = "SELECT L.Id, L.IdSerie, L.NumeroEpisode, L.IdLicence, L.IdPremiereEdition, L.IdPaysOrigine "
+            . ", LP.Id AS IdLivrePays, LP.Nom as NomLivre "
 
-            . "WHERE Id = " . $this->Id . " "
+            . "FROM li_livre_t L "
+            . "INNER JOIN li_livre_pays_t LP ON LP.IdPays = L.IdPaysOrigine AND LP.IdLivre = L.Id "
+
+            . "WHERE L.Id = " . $this->id . " "
             . "LIMIT 0,1"
             ;
-        $stmt = $bdd->query($requete)->fetch(); 
+        $stmt = $bdd->query($requete)->fetch();
         $this->setDatas($stmt);
+
+        $datasLivresPays = array();
+        $datasLivresPays['Id'] = $stmt['IdLivrePays'];
+        $datasLivresPays['IdLivre'] = $stmt['Id'];
+        $datasLivresPays['Idpays'] = $stmt['IdPaysOrigine'];
+        $datasLivresPays['Nom'] = $stmt['NomLivre'];
+        $livrePays = new LivrePays();
+        $livrePays->setDatas($datasLivresPays);
+        $this->setLivrePaysOrigine($livrePays);
+
     }
 
     /*********************/

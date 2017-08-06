@@ -7,8 +7,9 @@
         header('Location:../../../index.php');
   }
   include_once('../../../classes/li/livre.php');
-  $livre = new Editeur();
+  $livre = new Livre();
   $livre->setId($idElement);
+  $livre->getLivrePaysDetailBd($bdd);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -27,7 +28,7 @@
     <?php include_once('../../../layout/header.php'); ?>
     <?php include_once('../../../layout/menu.php'); ?>
     <div class="col-md-12">
-      <h1><?php echo $livre->getNom(); ?></h1>
+      <h1><?php echo $livre->getLivrePaysOrigine()->getNom(); ?></h1>
 
     </div>
   <?php include_once('../../../layout/javascript.php'); ?>

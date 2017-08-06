@@ -26,7 +26,7 @@
         <?php foreach($livres->getLivres() as $element) { ?>
         <div class="col-md-3">
             <div class="col-md-12 col-md-offset-1 panel panel-default">
-                <a href = "livres.php?id=<?php echo $element->getId(); ?>">
+                <a href = "livre.php?id=<?php echo $element->getId(); ?>">
                   <p><?php echo $element->getLivrePaysOrigine()->getNom(); ?></p>
                 </a>
             </div>
